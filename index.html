@@ -3,61 +3,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="HVR - HantzVIPRides: Premium Semi-VIP transport in Port Harcourt & Bonny. VIP XX Charters, Executive Fleet, Membership Cards.">
     <title>HVR - HantzVIPRides | Premium Semi-VIP Transport</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- GOLDEN H FAVICON -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23fbbf24'>H</text></svg>">
     <style>
-        body { background: #000; color: #fff; font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
-        .gold { color: #fbbf24; }
-        .bg-gold { background: #fbbf24; }
-        .border-gold { border-color: #fbbf24; }
-        .hover-gold:hover { color: #fbbf24; }
-        .card-hover:hover { transform: translateY(-5px); transition: 0.3s; }
+        *{margin:0;padding:0;box-sizing:border-box;font-family:Arial, sans-serif;scroll-behavior:smooth}
+        body{background:#000;color:#fff}
+        .gold{color:#fbbf24}
+        .bg-gold{background:#fbbf24}
+        nav{background:#090909;border-bottom:1px solid #222;padding:12px 20px;position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:12px}
+        .logo{width:40px;height:40px;background:#fbbf24;color:#000;border-radius:8px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:28px}
+        .container{max-width:1100px;margin:0 auto;padding:20px}
+        .center{text-align:center}
+        h1{font-size:40px;font-weight:bold;margin-bottom:10px}
+        h2{font-size:28px;font-weight:bold;margin-bottom:20px}
+        .card{background:#111;border:1px solid #222;padding:25px;border-radius:20px;margin-bottom:20px}
+        .grid{display:grid;gap:20px}
+        @media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}.grid-3{grid-template-columns:1fr 1fr 1fr}}
+        .btn{display:block;background:#fbbf24;color:#000;padding:14px;border-radius:12px;font-weight:bold;text-align:center;text-decoration:none;margin-top:10px}
+        .btn-green{background:#16a34a;color:#fff}
+        .fleet-box{background:linear-gradient(135deg,#fbbf24,#f59e0b);color:#000;padding:25px;border-radius:20px}
+        .fleet-tag{background:#000;color:#fbbf24;padding:10px;border-radius:10px;text-align:center;font-weight:bold}
+        .vip-card{padding:25px;border-radius:20px}
+        .vip-gold{background:linear-gradient(180deg,#fbbf24,#d97706);color:#000}
+        .vip-silver{background:linear-gradient(180deg,#d1d5db,#6b7280);color:#000}
+        .vip-diamond{background:linear-gradient(180deg,#67e8f9,#4f46e5);color:#fff}
+        footer{background:#000;border-top:1px solid #222;padding:30px 20px;text-align:center;margin-top:40px}
+        .hero-logo{width:100px;height:100px;background:#fbbf24;color:#000;border-radius:20px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:70px;margin:0 auto 20px}
     </style>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <nav class="bg-zinc-950 border-b border-zinc-800 sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <h1 class="text-2xl font-bold">HVR <span class="gold">VIPRIDES</span></h1>
-            <div class="hidden md:flex gap-6 font-semibold">
-                <a href="#home" class="hover-gold">HOME</a>
-                <a href="#vip" class="hover-gold">VIP CLUB</a>
-                <a href="#benefits" class="hover-gold">BENEFITS</a>
-                <a href="#safety" class="hover-gold">SAFETY</a>
-                <a href="#join" class="hover-gold">JOIN HVR</a>
-                <a href="#contact" class="hover-gold">CONTACT</a>
-            </div>
-        </div>
+    <!-- NAV WITH LOGO -->
+    <nav>
+        <div class="logo">H</div>
+        <h1>HVR <span class="gold">VIPRIDES</span></h1>
     </nav>
 
-    <!-- HOME / HERO -->
-    <section id="home" class="max-w-6xl mx-auto px-6 py-16">
-        <h1 class="text-5xl md:text-6xl font-bold text-center mb-4">WELCOME TO HVR</h1>
-        <p class="text-center text-zinc-400 text-lg mb-12">Premium Semi-VIP Transport | Port Harcourt • Bonny Island</p>
+    <!-- HOME -->
+    <div class="container center" style="padding-top:40px">
+        <!-- BIG LOGO IN HERO -->
+        <div class="hero-logo">H</div>
+        <h1>WELCOME TO HVR</h1>
+        <p style="color:#aaa;margin-bottom:30px">Premium Semi-VIP Transport | Port Harcourt • Bonny Island</p>
         
-        <!-- ROUTES -->
-        <div class="bg-zinc-900 p-8 rounded-3xl mb-16 card-hover">
-            <h2 class="text-3xl font-bold mb-6 text-center gold">OUR ROUTES</h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <div class="bg-black p-6 rounded-2xl border border-zinc-800">
-                    <h3 class="text-2xl font-bold gold mb-2">PORT HARCOURT</h3>
-                    <p class="text-zinc-400">Multiple boarding axes available</p>
-                </div>
-                <div class="bg-black p-6 rounded-2xl border border-zinc-800">
-                    <h3 class="text-2xl font-bold gold mb-2">BONNY ISLAND</h3>
-                    <p class="text-zinc-400">Fare: N6,000 - N12,000 depends on boarding axis</p>
-                </div>
+        <div class="card">
+            <h2 class="gold">OUR ROUTES</h2>
+            <div class="grid grid-2">
+                <div class="card"><h3 class="gold">PORT HARCOURT</h3><p style="color:#aaa">Multiple boarding axes available</p></div>
+                <div class="card"><h3 class="gold">BONNY ISLAND</h3><p style="color:#aaa">Fare: N6,000 - N12,000 depends on boarding axis</p></div>
             </div>
         </div>
 
         <!-- FLEET -->
-        <h2 class="text-4xl font-bold text-center mb-4">OUR FLEET</h2>
-        <p class="text-center text-zinc-400 mb-12">Travel In Comfort. Choose Your Class.</p>
-        <div class="grid md:grid-cols-2 gap-10">
-            <!-- XX CLASS -->
-            <div class="bg-gradient-to-br from-amber-400 to-yellow-500 text-black p-8 rounded-3xl card-hover">
-                <h3 class="text-3xl font-bold mb-2">XX CLASS</h3>
-                <p class="font-bold mb-4">(WITH AC) • PREMIUM CHARTER</p>
-                <div class="grid grid-cols-2 gap-
+        <h2 class="center">OUR FLEET</h2>
+        <div class="grid grid-2">
+            <div class="fleet-box">
+                <h3 style="font-size:24px">XX CLASS</h3>
+                <p style="font-weight:bold;margin-bottom:15px">(WITH AC) • PREMIUM CHARTER</p>
+                <div class="grid grid-2">
+                    <div class="fleet-tag">EX SUV</div><div class="fleet-tag">EX SIENNA</div>
+                    <div class="fleet-tag">EX COASTER</div><div class="fleet-tag">EX CAMRY</div>
+                    <div class="fleet-tag">EX COROLLA</div><div class="fleet-tag">EX HIACE</div>
+                </div>
+                <p style="font-size:12px;font-weight:bold;margin-top:10px">*Price based on Pickup & Drop-off. Very Negotiable*</p>
+            </div>
+            <div class="card">
+                <h3 class="gold" style="font-size:24px">SEMI VIP</h3>
+                <p style="color:#aaa;margin-bottom:15px">SHARED & PRIVATE RIDES</p>
+                <p>• 18 Seater Hiace Bus</p><p>• 14 Seater Bus</p><p>• Mini Keke Bus</p><p>• Camry</p><p>• Sienna</p>
+            </div>
+        </div>
+
+        <!-- VIP CLUB -->
+        <div style="background:#090909;padding:40px 20px;margin-top:40px;border-radius:20px">
+            <h2 class="center">VIP CLUB</h2>
+            <div class="card" style="border:2px solid #fbbf24">
+                <h2 class="gold center">VIP XX</h2>
+                <p class="center" style="color:#aaa;margin-bottom:20px">THE ULTIMATE CHARTER EXPERIENCE</p>
+                <div class="grid grid-3">
+                    <div class="card center"><b>100% CHARTER</b></div>
+                    <div class="card center"><b>CUSTOM ROUTES</b></div>
+                    <div class="card center"><b>VERY NEGOTIABLE</b></div>
+                </div>
+                <a href="https://wa.me/2348085526104?text=Hello%20HVR,%20I%20want%20VIP%20XX%20Charter" class="btn">WhatsApp Charter</a>
+            </div>
+
+            <h2 class="center" style="margin-top:30px">HVR MEMBERSHIP CARDS</h2>
+            <div class="grid grid-3">
+                <div class="vip-card vip-gold"><h3 class="center">HVR GOLD CARD</h3><p class="center"><b>5% Off + Priority Boarding</b></p></div>
+                <div class="vip-card vip-silver"><h3 class="center">HVR PLATFORM CARD</h3><p class="center"><b>10% Off + VIP Lounge</b></p></div>
+                <div class="vip-card vip-diamond"><h3 class="center">HVR DIAMOND CARD</h3><p class="center"><b>15% Off + 24/7 Concierge</b></p></div>
+            </div>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="container" style="padding-top:40px">
+            <h2 class="center">CONTACT HVR</h2>
+            <a href="tel:+2348085526104" class="btn">Call +234 808 552 6104</a>
+            <a href="https://wa.me/2348085526104" class="btn btn-green">WhatsApp Us</a>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="logo" style="margin:0 auto 10px">H</div>
+        <p class="gold"><b>HVR - HANTZVIPRIDES</b></p>
+        <p style="color:#777;font-size:12px">© 2026 HVR. Safety. Comfort. Class.</p>
+    </footer>
+</body>
+</html>
