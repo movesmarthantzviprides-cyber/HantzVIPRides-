@@ -3,90 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="HANTZVIPRIDES - Premium Car Rental & Intercity Transport. Bonny Route Launch 18th July 2027">
-  <title>HVR - HANTZVIPRIDES | Bonny Route Launch</title>
+  <title>HVR - HANTZVIPRIDES | Bonny Route Launch 18th July 2027</title>
   <style>
-    :root {
-      --gold: #D4AF37;
-      --dark: #050505;
-      --card: #111111;
-    }
+    :root { --gold: #E8B923; --deep: #0A0A0A; --card: #121212; }
     * { box-sizing: border-box; }
-    body { 
-      font-family: 'Arial', Helvetica, sans-serif; 
-      margin:0; padding:0; 
-      background: var(--dark); 
-      color: #eee; 
-    }
+    body { font-family: Arial, Helvetica, sans-serif; margin:0; padding:0; background: var(--deep); color: #ddd; line-height: 1.6; }
     .hero {
-      background: linear-gradient(rgba(5,5,5,0.85), rgba(5,5,5,0.9)), url('hero-bg.jpg') center/cover no-repeat;
-      min-height: 100vh;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      position: relative;
+      background: linear-gradient(rgba(10,10,10,0.88), rgba(10,10,10,0.92)), url('hero-bg.jpg') center/cover no-repeat;
+      min-height: 100vh; display: flex; align-items: center; text-align: center;
     }
-    h1 { font-size: clamp(42px, 8vw, 62px); color: var(--gold); font-weight: 900; letter-spacing: 4px; }
-    .btn { 
-      background: var(--gold); color: #000; padding: 16px 34px; 
-      border-radius: 50px; text-decoration: none; font-weight: 900; 
-      display: inline-block; margin: 12px; transition: all 0.4s;
+    h1 { font-size: clamp(48px, 9vw, 72px); color: var(--gold); font-weight: 900; letter-spacing: 4px; text-shadow: 0 0 25px rgba(232,185,35,0.5); }
+    h2 { color: var(--gold); font-size: 34px; text-align: center; margin: 40px 0 25px; }
+    .btn { background: var(--gold); color: #000; padding: 16px 36px; border-radius: 50px; font-weight: 900; text-decoration: none; display: inline-block; margin: 10px; transition: all 0.4s; box-shadow: 0 4px 15px rgba(232,185,35,0.3); }
+    .btn:hover { background: #ffeb3b; transform: translateY(-5px) scale(1.05); }
+    .grid, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(310px, 1fr)); gap: 25px; }
+    .card { background: var(--card); padding: 28px; border-radius: 16px; border: 1px solid #222; transition: all 0.4s; }
+    .card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(232,185,35,0.15); }
+    .route-title { color: var(--gold); font-size: 19px; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
+    .price { color: #00FF88; font-weight: bold; float: right; }
+    .luxury-text { color: #bbb; font-style: italic; font-size: 15.5px; }
+    .gallery img {
+      width: 100%; height: 220px; object-fit: cover; border-radius: 12px;
+      border: 2px solid #222; transition: all 0.4s ease;
     }
-    .btn:hover { background: #ffeb3b; transform: scale(1.05); }
-
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 25px; }
-    .card { background: var(--card); padding: 28px; border-radius: 16px; border: 1px solid #222; }
-    
-    .form-container { max-width: 600px; margin: 40px auto; background: #0a0a0a; padding: 40px; border-radius: 16px; border: 2px solid var(--gold); }
-    input, select, textarea { width: 100%; padding: 14px; margin: 10px 0; background: #1a1a1a; border: 1px solid #444; color: white; border-radius: 8px; }
-    
-    .counter { font-size: 2.8rem; font-weight: bold; color: var(--gold); }
-    footer { background: #000; padding: 50px 20px; text-align: center; border-top: 4px solid var(--gold); }
+    .gallery img:hover {
+      transform: scale(1.08);
+      border-color: var(--gold);
+      box-shadow: 0 0 20px rgba(232,185,35,0.4);
+    }
+    .section { padding: 80px 20px; }
+    @media (max-width: 768px) { .grid, .gallery { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
 
   <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="container" style="max-width:1200px; margin:auto; padding:20px;">
-      <img src="logo-hvr.png" alt="HANTZVIPRIDES Logo" style="width:220px; height:auto; margin-bottom:20px;">
+  <section class="hero">
+    <div style="max-width:1280px; margin:auto; padding:20px; width:100%;">
+      <img src="image-88.jpg" alt="HANTZVIPRIDES Logo" style="width:240px; margin-bottom:25px; border-radius:12px; box-shadow: 0 0 40px #E8B923;">
       <h1>HANTZVIPRIDES</h1>
-      <p style="font-size:22px; max-width:700px; margin:20px auto;">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
-      <p style="font-size:28px; color:var(--gold); font-weight:bold;">BONNY ROUTE LAUNCH — 18TH JULY 2027</p>
+      <p style="font-size:24px;">Premium Car Rental • Corporate Shuttle • Intercity Transport</p>
+      <p style="font-size:29px; color:var(--gold); font-weight:bold;">BONNY ROUTE LAUNCH — 18TH JULY 2027</p>
       <a href="#booking" class="btn">BOOK YOUR RIDE NOW</a>
-      <a href="https://wa.me/2348085526104" class="btn">WhatsApp +234 808 552 6104</a>
+      <a href="https://wa.me/2348085526104?text=Hi%20HANTZVIPRIDES%2C%20I%20want%20more%20info%20on%20your%20VIP%20SERVICES" class="btn">💬 WhatsApp Us</a>
     </div>
   </section>
 
-  <!-- ROUTES & OTHER SECTIONS (same as previous, slightly condensed) -->
-  <!-- ... (I kept the routes, concessions, vehicles, membership sections from before) ... -->
-
-  <!-- BOOKING FORM -->
-  <section id="booking" style="padding:80px 20px; background:#0a0a0a;">
-    <div class="form-container">
-      <h2 style="text-align:center; color:var(--gold);">Quick Booking Form</h2>
-      <form id="bookingForm">
-        <input type="text" id="name" placeholder="Full Name" required>
-        <input type="tel" id="phone" placeholder="Phone Number" required>
-        <input type="text" id="pickup" placeholder="Pickup Location" required>
-        <input type="text" id="dropoff" placeholder="Drop-off Location (e.g. Bonny or PH area)" required>
-        <select id="service" required>
-          <option value="">Select Service</option>
-          <option value="Semi VIP Bonny">Semi VIP Bonny Route</option>
-          <option value="XX Class Charter">XX Class (Full AC Charter)</option>
-          <option value="Corporate Shuttle">Corporate Shuttle</option>
-        </select>
-        <input type="date" id="date" required>
-        <textarea id="message" rows="3" placeholder="Additional information (passengers, etc.)"></textarea>
-        <button type="submit" class="btn" style="width:100%; font-size:18px;">SEND TO WHATSAPP</button>
-      </form>
+  <!-- PORT HARCOURT ROUTES -->
+  <section class="section" style="background:#0f0f0f;">
+    <h2>📍 PORT HARCOURT PICKUP/DROP-OFF + PRICES</h2>
+    <div class="grid">
+      <div class="card">
+        <h3 class="route-title">ROUTE 1</h3>
+        Aggrey Rd - Port Harcourt Township <span class="price">₦7,500</span><br>
+        UPE - Borokiri Sand field <span class="price">₦7,500</span><br>
+        Ibeto - Industry Road <span class="price">₦7,000</span><br>
+        Old GRA <span class="price">₦7,000</span><br>
+        Trans Amadi <span class="price">₦7,000</span><br>
+        Odili Rd <span class="price">₦7,000</span><br>
+        Elelenwo Akpajo <span class="price">₦7,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 2</h3>
+        Abali Park Aba road <span class="price">₦7,000</span><br>
+        Diobu Mile1 - Mile 3 <span class="price">₦7,000</span><br>
+        D/Line <span class="price">₦7,000</span><br>
+        New GRA <span class="price">₦7,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 3</h3>
+        Mile 4 - Mile 6 <span class="price">₦8,500</span><br>
+        Eagle Island <span class="price">₦9,000</span><br>
+        Ada George <span class="price">₦9,000</span><br>
+        Iwofe <span class="price">₦9,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 4</h3>
+        Mgbuoba - Ozuoba <span class="price">₦10,000</span><br>
+        Choba <span class="price">₦10,000</span><br>
+        Omagwa, Airport, Igwirita <span class="price">₦12,000</span><br>
+        Rukpokwu <span class="price">₦12,000</span>
+      </div>
+      <div class="card">
+        <h3 class="route-title">ROUTE 5</h3>
+        Eleme junction, Artillery <span class="price">₦6,000</span><br>
+        Rumukwurishe, Tank <span class="price">₦7,000</span><br>
+        Eleozu, Rumudara <span class="price">₦8,000</span><br>
+        Eneka <span class="price">₦8,500</span>
+      </div>
     </div>
   </section>
 
-  <footer>
+  <!-- BONNY ROUTES -->
+  <section class="section" style="background:#111;">
+    <h2>⛴️ SEMI VIP BONNY - PH ROUTES</h2>
+    <div class="grid">
+      <div class="card"><h3 class="route-title">BONNY ROUTE 01</h3>Coal Beach, Cable Rd, Ikuba Square, Amaomu, Old Main Market, Sandfield Rd</div>
+      <div class="card"><h3 class="route-title">BONNY ROUTE 02</h3>Berger Rd, Iwoama, New Road 1&2, Hospital Rd 1&2</div>
+      <div class="card"><h3 class="route-title">BONNY ROUTE 03</h3>Ghana Woman, Akiama, Abalamabie, Wilbros Rd, New Road 3</div>
+      <div class="card"><h3 class="route-title">BONNY ROUTE 04</h3>Finima Townhall, Finima Market, Lighthouse, Tank Rd, NLNG, Agaja, Workers Camp</div>
+    </div>
+  </section>
+
+  <!-- FLEET GALLERY -->
+  <section class="section" style="background:var(--deep);">
+    <h2>🚙 OUR PREMIUM FLEET</h2>
+    <div class="gallery">
+      <img src="fleet1.jpg" alt="Executive Black SUV - Toyota Prado or Land Cruiser">
+      <img src="fleet2.jpg" alt="Toyota Sienna - 7 Seater Executive">
+      <img src="fleet3.jpg" alt="Hiace Bus - 18 Seater Semi VIP">
+      <img src="fleet4.jpg" alt="Coaster Bus - Luxury 30 Seater">
+      <img src="fleet5.jpg" alt="Toyota Camry - Executive Sedan">
+      <img src="fleet6.jpg" alt="Luxury Van for Corporate Shuttle">
+    </div>
+  </section>
+
+  <!-- CORPORATE SHUTTLE -->
+  <section class="section" style="background:#0f0f0f;">
+    <h2>💼 CORPORATE SHUTTLE PACKAGES</h2>
+    <div class="grid">
+      <div class="card"><h3>DAILY SHUTTLE</h3><p class="luxury-text">Staff transport<br>From ₦45,000/day</p></div>
+      <div class="card"><h3>WEEKLY CORPORATE</h3><p class="luxury-text">Dedicated vehicles + driver<br>From ₦280,000/week</p></div>
+      <div class="card"><h3>EXECUTIVE CONTRACT</h3><p class="luxury-text">Monthly/Yearly contracts<br>Custom pricing + tracking</p></div>
+    </div>
+  </section>
+
+  <!-- VEHICLE TRACKING -->
+  <section class="section" style="background:var(--deep);">
+    <h2>🛰️ VEHICLE TRACKING & FLEET MANAGEMENT</h2>
+    <div class="grid">
+      <div class="card">Real-Time GPS Tracking<br><span class="luxury-text">Live location & alerts</span></div>
+      <div class="card">Driver Behavior Monitoring<br><span class="luxury-text">Safety & fuel reports</span></div>
+      <div class="card">PREMOB & Profiling System</div>
+    </div>
+  </section>
+
+  <!-- APPLICATIONS -->
+  <section class="section" style="text-align:center; background:#111;">
+    <h2>📋 APPLICATION FORMS</h2>
+    <a href="applications.html" class="btn">View All Application Forms</a>
+  </section>
+
+  <footer style="padding:60px 20px; text-align:center; background:#000; border-top:4px solid var(--gold);">
     <p><strong>Bank:</strong> HANTZ INTERNATIONAL NIGERIA | 2007689316 | FIRST BANK</p>
     <p>Operations: Port Harcourt, Rivers State</p>
-    <p style="margin-top:15px;">🌐 <a href="https://hantzviprides.net" style="color:var(--gold);">hantzviprides.net</a></p>
   </footer>
-
-  <script>
+</body>
+</html>
