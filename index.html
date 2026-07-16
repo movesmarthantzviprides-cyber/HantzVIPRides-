@@ -18,8 +18,6 @@
     .card:hover { transform: translateY(-10px); }
     .route-title { color: var(--gold); font-size: 19px; margin-top: 0; border-bottom: 1px solid #333; padding-bottom: 10px; }
     .price { color: #00FF88; font-weight: bold; float: right; font-size: 18px; }
-    .situation-room { background: #111; padding: 35px; border-radius: 16px; border: 3px solid var(--gold); margin: 40px 0; }
-    .booking-item { background: #1a1a1a; padding: 15px; margin: 12px 0; border-radius: 8px; border-left: 5px solid #0f0; }
     .section { padding: 80px 20px; }
   </style>
 </head>
@@ -35,13 +33,6 @@
       <a href="#booking" class="btn">BOOK YOUR RIDE NOW</a>
       <a href="partners.html" class="btn">Corporate Partners Preview</a>
     </div>
-  </section>
-
-  <!-- DRIVERS SITUATION ROOM (Prominent) -->
-  <section class="section situation-room">
-    <h2>🚦 LIVE DRIVERS & PASSENGERS SITUATION ROOM</h2>
-    <p style="text-align:center; margin-bottom:25px; color:#ccc;">Real-time bookings across multiple vehicles and routes</p>
-    <div id="live-bookings"></div>
   </section>
 
   <!-- PORT HARCOURT ROUTES -->
@@ -83,43 +74,29 @@
     </div>
   </section>
 
+  <!-- FLEET -->
+  <section class="section" style="background:var(--deep);">
+    <h2>🚙 OUR PREMIUM FLEET</h2>
+    <div class="grid">
+      <div class="card"><strong>XX CLASS</strong><br>Executive SUV, Camry, Sienna, Hiace, Coaster</div>
+      <div class="card"><strong>SEMI VIP</strong><br>18-Seater Hiace, 14-Seater Bus</div>
+      <div class="card"><strong>VIP XX CHARTER</strong><br>100% Private Luxury Vehicles</div>
+    </div>
+  </section>
+
+  <!-- INSURANCE & BANKING -->
+  <section class="section" style="background:#111; text-align:center;">
+    <p><strong>All HVR Drivers, Vehicles and Passengers are covered under Group Accident Insurance Policy</strong> with the Official Insurer of HANTZVIPRIDES.</p>
+    <p style="margin-top:30px;">
+      <strong>Booking & Payment Account</strong><br>
+      HANTZ INTERNATIONAL NIGERIA<br>
+      Account Number: <strong>2007689316</strong><br>
+      First Bank
+    </p>
+  </section>
+
   <footer style="padding:60px 20px; text-align:center; background:#000; border-top:4px solid var(--gold);">
     <p><strong>Bank:</strong> Official Bank of HANTZVIPRIDES</p>
   </footer>
-
-  <script>
-    // Live Multi-Booking Situation Room
-    const liveBookings = [
-      { vehicle: "Sienna", route: "BNY-PHC Airport Axis", time: "7am", booked: 5, capacity: 8 },
-      { vehicle: "Mini Bus", route: "PHC-BNY Aggrey Rd", time: "9am", booked: 4, capacity: 7 },
-      { vehicle: "Mini Bus", route: "PHC-BNY Ada George", time: "10am", booked: 6, capacity: 7 },
-      { vehicle: "Hiace", route: "BNY-PHC Eleme Axis", time: "4pm", booked: 14, capacity: 18 }
-    ];
-
-    function updateSituationRoom() {
-      let html = "";
-      liveBookings.forEach(b => {
-        const percent = Math.round((b.booked / b.capacity) * 100);
-        html += `
-          <div class="booking-item" style="background:#1a1a1a; padding:15px; margin:10px 0; border-radius:8px; border-left:5px solid #0f0;">
-            <strong>${b.vehicle}</strong> ${b.route} ${b.time}<br>
-            Booked: <strong>\( {b.booked}/ \){b.capacity}</strong> (${percent}%) 
-            ${percent > 80 ? '🔴 Almost Full' : '🟢 Booking Open'}
-          </div>`;
-      });
-      document.getElementById('live-bookings').innerHTML = html || '<p>No active bookings at the moment.</p>';
-    }
-
-    // Update every 6 seconds
-    setInterval(() => {
-      liveBookings.forEach(b => {
-        if (Math.random() > 0.6 && b.booked < b.capacity) b.booked++;
-      });
-      updateSituationRoom();
-    }, 6000);
-
-    // Initial load
-    updateSituationRoom();
-  </script>
 </body>
 </html>
